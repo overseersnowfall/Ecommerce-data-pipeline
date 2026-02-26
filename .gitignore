@@ -208,3 +208,6 @@ __marimo__/
 
 # Ignore raw dataset files
 data/raw/*.csv
+
+# Ignore .env file containing environment variables
+.env
