@@ -90,38 +90,36 @@ A visual architecture diagram illustrating the pipeline structure will be includ
 ```
 Ecommerce-data-pipeline/
 │
-├── data/                               # Raw datasets
-│   └── raw/                             # Original CSV files used in the project but not save in github and igroned in gitignore due to large files
+├── data/                                                  # Raw datasets
+│   └── raw/                                               # Original CSV files used in the project but not save in github and igroned in gitignore due to large files
 │
-├── notebooks/                               # Project documentation
-│   ├── data_architecture.drawio         # Overall Medallion architecture diagram
-│   ├── data_flow.drawio                 # Pipeline flow (CSV → Bronze → Silver → Gold)
-│   ├── star_schema.drawio               # Gold layer dimensional model
-│   ├── data_catalog.md                  # Dataset description and column metadata
-│   ├── pipeline_design.md               # Explanation of ETL design decisions
-│   └── naming_conventions.md            # Naming standards for tables and columns
+├── notebooks/                                             # Project documentation
+│   ├── data_architecture_diagram_ecommerce.drawio         # Overall Medallion architecture diagram
+│   ├── data_catalog.md                                    # data catalog for gold layer tables
+│   ├── data_flow_diagram_ecommerce.drawio                 
+│   ├── data_pipeline_layers.md                            
 │
-├── sql/                                # SQL transformations and warehouse scripts
+├── sql/                                                   # SQL transformations and warehouse scripts
 │
-│   ├── logging/                         # Pipeline logging infrastructure
-│   │   └── logging.sql                  # Logging schema + pipeline_log table
+│   ├── logging/                                           # Pipeline logging infrastructure
+│   │   └── logging.sql                                    # Logging schema + pipeline_log table
 │
-│   ├── silver_layer/                          # Silver layer transformations
-│   │   ├── ddl_silver.sql               # Create Silver tables
-│   │   └── load_silver.sql              # Stored procedure to clean + load data
+│   ├── silver_layer/                                      # Silver layer transformations
+│   │   ├── ddl_silver.sql                                 # Create Silver tables
+│   │   └── load_silver.sql                                # Stored procedure to clean + load data
 │
-│   └── gold_layer/                            # Data warehouse layer
-│       ├── ddl_gold.sql                 # Create dimension and fact tables
-│       └── load_gold.sql                # Stored procedure for Gold layer loading
+│   └── gold_layer/                                        # Data warehouse layer
+│       ├── ddl_gold.sql                                   # Create dimension and fact tables
+│       └── load_gold.sql                                  # Stored procedure for Gold layer loading
 |
-├── src/                                # Python code (Bronze ingestion pipeline)
-│   ├── load_bronze.py                   # Main ingestion script with logging
+├── src/                                                   # Python code (Bronze ingestion pipeline)
+│   ├── load_bronze.py                                     # Main ingestion script with logging
 │
-├── .env                                # Where user password, database name, host name are stored and added in gitigrone
-├── .env example                        # to show others the example format of how env file saved
+├── .env                                                   # Where user password, database name, host name are stored and added in gitigrone
+├── .env example                                           # to show others the example format of how env file saved
 │
-├── README.md                           # Project documentation
-├── .gitignore                          # data/raw and .env are added
+├── README.md                                              # Project documentation
+├── .gitignore                                             # data/raw and .env are added
 └── LICENSE
 ```
 
