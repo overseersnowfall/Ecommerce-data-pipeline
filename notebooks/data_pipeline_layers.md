@@ -122,6 +122,8 @@ The logging framework records:
 * Row counts
 * Error messages
 
+![Logging_Table](notebooks/logging_table.png)
+
 This enables:
 
 * pipeline observability
