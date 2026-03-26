@@ -117,15 +117,41 @@ Ecommerce-data-pipeline/
 ├── src/                                # Python code (Bronze ingestion pipeline)
 │   ├── load_bronze.py                   # Main ingestion script with logging
 │
-├── .env                                # Where user password, database name, host name are saved and put in gitigrone
+├── .env                                # Where user password, database name, host name are stored and added in gitigrone
 ├── .env example                        # to show others the example format of how env file saved
 │
 ├── README.md                           # Project documentation
-├── .gitignore
+├── .gitignore                          # data/raw and .env are added
 └── LICENSE
 ```
 
 ---
+
+# Logging and Pipeline Monitoring
+
+To simulate real production pipelines, the project includes a **logging system for ETL execution**.
+
+The logging framework records:
+
+* Pipeline name
+* Table being processed
+* Execution start time
+* Execution end time
+* Row counts
+* Error messages
+
+![Logging_Table](notebooks.logging_table.png)
+
+This enables:
+
+* pipeline observability
+* debugging
+* execution tracking
+
+Logging was implemented using SQL tables and stored procedures.
+
+---
+
 
 # Technologies Used
 
