@@ -122,7 +122,7 @@ The logging framework records:
 * Row counts
 * Error messages
 
-![Logging_Table](notebooks/logging_table.png)
+![Logging_Table](logging_table.png)
 
 This enables:
 
